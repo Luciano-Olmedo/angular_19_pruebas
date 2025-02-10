@@ -1,0 +1,21 @@
+<div class="max-w-sm rounded overflow-hidden shadow-lg bg-white border-2 m-2">
+    <!-- Imagen -->
+    <img class="w-full" [src]="hero.image" alt="Aioria de Leo">
+  
+    <!-- Contenido de la card -->
+    <div class="px-6 py-4 bg-gray-200/75">
+      <!-- Título -->
+      <div class="font-bold text-xl mb-2">{{hero.name}}</div>
+  
+      <!-- Propiedades -->
+      <div class="text-gray-700 text-base font-bold">
+        <span class="block ">Inteligencia: {{hero.powerstats.intelligence}}</span>
+        <span class="block">Combate: {{hero.powerstats.combat}}</span>
+        <span class="block">Fuerza: {{hero.powerstats.strength}}</span>
+        <span class="block">Velocidad: {{hero.powerstats.speed}}</span>
+        <span class="block">Durabilidad: {{hero.powerstats.durability}}</span>
+        <span class="block">Poder: {{hero.powerstats.power}}</span>
+        
+      </div>
+    </div>
+  </div>
