@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Hero } from '../../shared/hero.interface';
+import { Hero, PowerStat } from '../../shared/hero.interface';
 
 @Component({
   selector: 'app-hero-item',
@@ -23,5 +23,22 @@ export class HeroItemComponent {
     alignment: 'good',
 
   }
+  decrementPowerStats(powerstat: PowerStat):void{
 
-}
+    const value= this.hero.powerstats[powerstat];
+    if(value>0){
+      this.hero.powerstats[powerstat]= value - 1;
+    }
+  };
+  incrementPowerStats(powerstat: PowerStat):void{
+
+    const value= this.hero.powerstats[powerstat];
+    if(value<100){
+      this.hero.powerstats[powerstat]= value + 1;
+    }
+  }
+  
+
+};
+
+
